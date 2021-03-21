@@ -1,0 +1,51 @@
+<!Doctype html>
+<html>
+<head>
+<title>
+Pauls | Gaming Page
+</title>
+<script src="
+Javascripts\Title.js
+">
+</script>
+<script>
+function newPopup(url) {
+	popupWindow = window.open(
+		url,'popUpWindow','height=300,width=400,left=10,top=10,resizable=NO,scrollbars=NO,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+}
+function displayMessage(firstName) {
+    document.getElementById("heading").innerHTML="Hello " + firstName + ",Welcome to Pauls Gaming Page";
+	document.getElementById("nameForm").style.display = "none";
+	document.getElementById("tempheading").style.display = "none";
+}
+</script>
+<link rel="stylesheet" href="Stylesheets\home_page.css">
+</head>
+<body style="background-color:Aquamarine" onload="scrollMSG">
+<h1 class="mainHeading" id="tempheading">
+Welcome to Pauls Gaming Page
+</h1>
+<h1 class="mainHeading" id="heading">
+</h1>
+<form id="nameForm">
+  First name:
+  <input type="input" name="yourName">
+  <input
+  type="button"
+  onclick="displayMessage(form.yourName.value);"
+  value="Submit">
+</form> 
+<hr>
+<p class="description"><b>
+Lets shift our attention to games.
+</p></b>
+<hr>
+<br>
+<br>
+<button><a href="online_page\Games.html" target="_blank" class="gamingPageButton">Play Online Games</a></button> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button><a href="online_page\Offline Games.html" target="_blank" class="gamingPageButton">Play Offline Games</a></button>
+<br>
+<br>
+</body>
+</html>
