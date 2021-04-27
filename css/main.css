@@ -30,3 +30,12 @@
   background-color: transparent;
   text-decoration: underline;
 }
+.description {
+	font-family: Georgia;
+	font-size: 28px;
+	font-style: italic;
+	text-transform: none;
+	letter-spacing: 1px;
+	line-height: 30px;
+	color: #FFA500;
+}
