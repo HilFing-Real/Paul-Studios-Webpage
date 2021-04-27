@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+<head>
+<title>
+Pauls | Home
+</title>
+<script src="Javascripts\Title.js"></script>
+<script>
+function displayMessage(firstName) {
+    document.getElementById("heading").innerHTML="Hello " + firstName + ",Welcome to Pauls";
+	document.getElementById("nameForm").style.display = "none";
+	document.getElementById("tempheading").style.display = "none";
+}
+</script>
+<link rel="stylesheet" href="css\main.css">
+<body style="background-color:Aquamarine" onload="scrollMSG()">
+    <marquee behavior="Alternate" direction="Right" ScrollAmount="10">
+        <img src="viewlogo.jpg" alt="Pauls" style="border:3.5px solid Green;" width="100" height="100">
+    </marquee>
+    <h1 class="mainHeading" id="tempheading">
+    Welcome to Pauls
+    </h1>
+    <h1 class="mainHeading" id="heading">
+    </h1>
+    <form id="nameForm">
+      First name:
+      <input type="input" name="yourName">
+      <input
+      type="button"
+      onclick="displayMessage(form.yourName.value);"
+      value="Submit">
+    </form> 
+</body>
+</head>
