@@ -1,0 +1,32 @@
+.mainHeading {
+	font-family: Algerian;
+	font-size: 75px;
+	font-weight: bold;
+	color: #8B008B;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.normalLink:link {
+  color: #FFA500;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.normalLink:visited {
+  color: Blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.normalLink:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.normalLink:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
