@@ -26,9 +26,16 @@ function test1func() {
 	document.cookie = "ip = " + ip;
 	const cookieValue = document.cookie
   						.split('; ')
-  						.find(row => row.startsWith('test2='))
-  						.split('=')[1];
-	console.log("success");
+  						.find(row => row.startsWith('ip = '))
+  						.split('= ')[1];
+	if (cookieValue = ip) {
+		console.log("success");
+	} else {
+		console.log("failed");
+		console.log("Debug report : -");
+		console.log("cookievalue = " + cookieValue)
+		console.log("IP = " + ip)
+	}
 }
 </script>
 <body >
