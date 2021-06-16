@@ -27,7 +27,8 @@ function test1func() {
 	const cookieValue = document.cookie
   						.split('; ')
   						.find(row => row.startsWith('ip = '))
-  						.split('= ')[1];
+	console.log(cookieValue);
+  	var value = cookieValue.split('= ')[1];
 	if (cookieValue = ip) {
 		console.log("success");
 	} else {
