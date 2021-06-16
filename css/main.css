@@ -232,3 +232,6 @@ body {
 	position:relative;
 	top:1px;
 }  
+canvas { 
+	background: #eee; 
+}
