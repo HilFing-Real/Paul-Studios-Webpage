@@ -23,6 +23,11 @@ function myIP() {
 function test1func() {
 	var ip = myIP();
 	console.log(ip);
+	document.cookie = "ip = " + ip;
+	const cookieValue = document.cookie
+  						.split('; ')
+  						.find(row => row.startsWith('test2='))
+  						.split('=')[1];
 	console.log("success");
 }
 </script>
