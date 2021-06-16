@@ -20,8 +20,13 @@ function myIP() {
 
     return false;
 }
-var ip = myIP()
+function test1() {
+	var ip = myIP()
 document.getElementById("test1").innerHTML = ip;
+}
 </script>
 <body>
 <p id="test1"> Hi </p>
+<button onclick="test1">Click me</button>
+</body>
+</head>
