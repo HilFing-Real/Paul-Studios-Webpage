@@ -5,17 +5,36 @@
 Pauls | Home
 </title>
 <script src="Javascripts\Title.js"></script>
+<script src="Javascripts/cookie.js"></script>
+<script src="Javascripts/Welcome.js"></script>
 <script>
-function displayMessage(firstName) {
-    document.getElementById("heading").innerHTML="Hello " + firstName + ",Welcome to Pauls";
-	document.getElementById("nameForm").style.display = "none";
-	document.getElementById("tempheading").style.display = "none";
-}
+    function resetname() {
+        deletecookie("name");
+        document.getElementById("heading").style.display = "none";
+	    document.getElementById("nameForm").style.display = "block";
+	    document.getElementById("tempheading").style.display = "block";
+    }
 </script>
+<script> 
+    document.onreadystatechange = function() { 
+        if (document.readyState !== "complete") { 
+            document.querySelector( 
+              "body").style.visibility = "hidden"; 
+            document.querySelector( 
+              "#loader").style.visibility = "visible"; 
+        } else { 
+            document.querySelector( 
+              "#loader").style.display = "none"; 
+            document.querySelector( 
+              "body").style.visibility = "visible"; 
+        } 
+    }; 
+</script> 
 <link rel="stylesheet" href="css\main.css">
-<body style="background-color:Aquamarine" onload="scrollMSG()">
+<body style="background-color:Aquamarine" onload="scrollMSG();loadname()">
+    <div id="loader" class="center"></div>
     <marquee behavior="Alternate" direction="Right" ScrollAmount="10">
-        <img src="https://i.imgur.com/qOie39M.jpg" alt="Pauls" style="border:3.5px solid Green;" width="100" height="100">
+        <a href="http://paulstudios.great-site.net" ><img src="https://i.imgur.com/qOie39M.jpg" alt="Pauls" style="border:3.5px solid Green;" width="100" height="100"></a>
     </marquee>
     <h1 class="mainHeading" id="tempheading">
     Welcome to Pauls
@@ -43,6 +62,6 @@ function displayMessage(firstName) {
     <p class="gamedescription">
         Lets play a fun <a href="game/index.html">Game</a>.
     </p>
-    
+    <p>Click <a href="javascript:resetname();">here</a> to reset your name!</p>
 </body>
 </head>

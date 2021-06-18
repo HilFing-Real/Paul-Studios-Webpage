@@ -3,6 +3,9 @@
 <head>
 <title>Pauls | Offline Games</title>
 <link rel="stylesheet" href="..\css\main.css">
+<script src="../Javascripts\Title.js"></script>
+<script src="../Javascripts/cookie.js"></script>
+<script src="../Javascripts/Welcome.js"></script>
 <script>
 function setUp() {
 	document.getElementById("downloadable").style.display = "none";
@@ -12,6 +15,8 @@ function setUp() {
 	document.getElementById("nameForm").style.display = "block";
 	document.getElementById("tempheading").style.display = "block";
 }
+</script>
+<script>
 function showDownloadable() {
 	document.getElementById("Portable").style.display = "none";
 	document.getElementById("Java").style.display = "none";
@@ -27,15 +32,28 @@ function showPortable() {
 	document.getElementById("Java").style.display = "none";
 	document.getElementById("Portable").style.display = "block";
 }
-function displayMessage(firstName) {
-    document.getElementById("heading").innerHTML="Hello " + firstName + ",Welcome to Pauls Offline Games";
-	document.getElementById("heading").style.display = "block"
-	document.getElementById("nameForm").style.display = "none";
-	document.getElementById("tempheading").style.display = "none";
-}
 </script>
+<script> 
+    document.onreadystatechange = function() { 
+        if (document.readyState !== "complete") { 
+            document.querySelector( 
+              "body").style.visibility = "hidden"; 
+            document.querySelector( 
+              "#loader").style.visibility = "visible"; 
+        } else { 
+            document.querySelector( 
+              "#loader").style.display = "none"; 
+            document.querySelector( 
+              "body").style.visibility = "visible"; 
+        } 
+    }; 
+</script> 
 </head>
-<body onload="setUp()">
+<body onload="setUp();scrollMSG();loadname();">
+	<div id="loader" class="center"></div>
+	<marquee behavior="Alternate" direction="Right" ScrollAmount="10">
+        <a href="http://paulstudios.great-site.net" ><img src="https://i.imgur.com/qOie39M.jpg" alt="Pauls" style="border:3.5px solid Green;" width="100" height="100"></a>
+    </marquee>
 <h1 class="mainHeading" id="tempheading">
 Welcome to Pauls Offline Games
 </h1>
@@ -54,10 +72,8 @@ Welcome to Pauls Offline Games
 <button onclick="showJava()" class="offlineGamesButton">Java Games</button>
 <button onclick="showPortable()" class="offlineGamesButton">Portable Games</button>
 <p id="downloadable">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="offlineGamesText" href="Games - .exe .apk\Mario\Mario 4.2 Setup.exe">Mario 4.2</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="offlineGamesText" href="Games - .exe .apk\Match Three\Match Three 1.5 Setup.exe">Match Three 1.2</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="offlineGamesText" href="Games - .exe .apk\My First Game\Space Shooter\Space Shooter 5.8 Setup.exe">Space Shooter 5.8 (Desktop)</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="offlineGamesText" href="Games - .exe .apk\My First Game\Space Shooter\Space Shooter.apk">Space Shooter(Mobile)</a></button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coming Soon<br>
+
 </p>
 <p id="Java">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="offlineGamesText" href="Java\Executables\Jar\beasties.jar">Beasties</a><br>
@@ -71,8 +87,7 @@ Welcome to Pauls Offline Games
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="offlineGamesText" href="Java\Executables\Jar\ZorkedCastle.jar">Zorked Castle</a><br>
 </p>
 <p id="Portable">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="offlineGamesText" href="Portable/Game1.zip">Desert Rally</a><br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="offlineGamesText" href="Portable/Animations.zip">Funny Animations</a><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coming Soon<br>
 </p>
 </body>
 </html>
